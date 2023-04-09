@@ -1,0 +1,44 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Resolutions</title>
+</head>
+
+<body>
+    <script>
+        console.log('Checking by running a script');
+    </script>
+    <div class="display" style="color: white;">
+        ksajfksajdfl;jaslfkjsafj
+        NOT WORKING
+    </div>
+    <div class="container">
+        <header>
+            <h1>Monthly Resolutions</h1>
+
+            <form class="new-resolution">
+                <input type="text" name="title" placeholder="New Resolution...">
+                <input type="submit" value="Submit">
+            </form>
+        </header>
+        <ul>
+            {{#each resolutions}}
+                {{> resolution}}
+            {{/each}}
+        </ul>
+    </div>
+    
+</body>
+
+<template name="resolution">
+    <li>{{title}}</li>
+</template>
+
+<!--template name="info">
+    <h2>Learn Meteor!</h2>
+    <ul>
+        <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+        <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+        <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+        <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+    </ul>
+</template-->
